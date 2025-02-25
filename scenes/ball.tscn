@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://drs51cxjecwcg"]
+
+[ext_resource type="PackedScene" uid="uid://bv4agcwi1j33" path="res://scenes/base_rigid_body.tscn" id="1_q7u2l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3at8"]
+
+[node name="Ball" type="Node2D"]
+
+[node name="BaseRigidBody" parent="." instance=ExtResource("1_q7u2l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseRigidBody"]
+shape = SubResource("CircleShape2D_g3at8")
+
+[node name="Sprite2D" type="Sprite2D" parent="BaseRigidBody"]
